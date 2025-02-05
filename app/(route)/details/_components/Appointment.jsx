@@ -101,7 +101,7 @@ const Appointment = ({ doctor }) => {
         <DialogTrigger>
           <Button className="rounded-full mt-5">Book Appointment</Button>
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent className="overflow-y-auto max-h-[90vh]">
           <DialogHeader>
             <DialogTitle className="text-primary font-bold">
               Doctor Appointment
@@ -118,7 +118,7 @@ const Appointment = ({ doctor }) => {
                     selected={date}
                     disabled={isPastDay}
                     onSelect={setDate}
-                    className="rounded-md border"
+                    className="rounded-md border shadow flex justify-center"
                   />
                 </div>
                 <div>
@@ -133,7 +133,7 @@ const Appointment = ({ doctor }) => {
                         className={`${
                           item.time === slectedTimeSlot &&
                           "bg-primary text-white"
-                        } text-center p-2 border rounded-full cursor-pointer duration-200 hover:bg-primary hover:text-white`}
+                        } text-center sm:text-sm text-[11px] p-2 border rounded-full cursor-pointer duration-200 hover:bg-primary hover:text-white`}
                         key={index}
                       >
                         {item.time}
